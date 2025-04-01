@@ -1,12 +1,51 @@
-body{
-    color: steelblue;
-    font-family: Arial, sans-serif;
+:root{
+    --white: #F4F4F6;
+    --green:#58B08B;
+    --metal-blue:#6C90AC;
+    --dark-gray:#6A7680;
+    --gray-blue:#344055;
 }
+
+body{
+    background-color: steelblue;
+    font-family: Arial, sans-serif;
+    background:coral;
+}
+
+h1{
+    padding-bottom:1rem;
+}
+
+#navbar{
+    position:fixed;
+    top:0;
+    width:100;
+    background-color:var(--dark-gray);
+    background:rgba(#344055, 0.5);
+}
+#navbar a{
+    text-decoration:none;
+    color:var(--white);
+}
+
+#navbar li{
+    list-style-type:none;
+    display:inline;
+}
+#navbar li:hover{
+    background-color:var(--gray-blue);
+}
+
 #biography {
     margin: auto;
     text-align: center;
 }
 
+#contact{
+    display:flex;
+    align-content:center;
+    justify-content:center;
+}
 #contact li {
     list-style-type: none;
     /*need to get rid of padding*/
@@ -18,4 +57,13 @@ body{
 
 #portrait {
     width: 25%;
+}
+
+#artifacts{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+#artifacts h1, #artifacts h2{
+    text-align:center;
 }
