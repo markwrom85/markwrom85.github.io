@@ -1,3 +1,21 @@
-ul{
-    list-style-type:none;
+body{
+    color: steelblue;
+    font-family: Arial, sans-serif;
+}
+#biography {
+    margin: auto;
+    text-align: center;
+}
+
+#contact li {
+    list-style-type: none;
+    /*need to get rid of padding*/
+    display: inline;
+}
+#contact i{
+    padding:5px;
+}
+
+#portrait {
+    width: 25%;
 }

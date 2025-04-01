@@ -3,66 +3,101 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
-    <h1>Markus Rom</h1>
-    <img src="Portrait.JPG" alt="Portrait" width="200" height="auto">
-    <p>Hello, I’m Markus Rom, an aspiring game developer and student at Boise State University majoring in
-        Games, Interactive Media, and Mobile Technologies (GIMM). Through my class experiences,
-        I have become skilled at using Unity, C#, and the Adobe Suite to create various interactive experiences.
-    </p>
-    <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/markus-rom-48202b2ab/">LinkedIn</a>
-        </li>
-        <li>
-            Email: <a href="mailto:markwrom85@gmail.com">markwrom85@gmail.com</a>
-        </li>
-        <li>
-            <a href="https://github.com/markwrom85">github.com/markwrom85</a>
-        </li>
-    </ul>
-    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="biography">
+                <br>
+                <h1>Markus Rom</h1>
+                <img src="Portrait.JPG" alt="Portrait" class="img-fluid" id="portrait">
+                <br>
+                <br>
+                <p>Hello, I'm Markus Rom, an aspiring game developer and student at Boise State University majoring in
+                    Games, Interactive Media, and Mobile Technologies (GIMM). Through my class experiences,
+                    I have become skilled at using Unity, C#, and the Adobe Suite to create various interactive
+                    experiences.
+                </p>
+                <ul id="contact">
+                    <li>
+                        <i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/markus-rom-48202b2ab/">LinkedIn</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>Email: <a href="mailto:markwrom85@gmail.com">markwrom85@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i><a href="https://github.com/markwrom85">github.com/markwrom85</a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
 
-    <h2>Pills of Hatred</h2>
-    <p>Pills of Hatred is a local multiplayer game where players compete to score the most points.
-        Players run around an arena to pick up items to add to their score, and fighting each other lets players gain
-        more points. Throughout this project, I learned how to set up a split-screen camera in Unity, and how the camera
-        angles and camera controls used can affect the player experience. It was fun to create the camera system, mainly
-        because it wasn’t required of the project but it was something that I really wanted to learn how to implement. I
-        also had a lot of fun creating the game’s movement system, because I feel that the gameplay encourages moving
-        around the arena quickly, and the movement is quick enough to feel like a good place. Also, the movement was
-        very responsive to the player’s input, allowing players to weave around obstacles.
-    </p>
-    <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Pills of Hatred</h2>
+                <p>Pills of Hatred is a local multiplayer game where players compete to score the most points.
+                    Players run around an arena to pick up items to add to their score, and fighting each other lets players gain
+                    more points. Throughout this project, I learned how to set up a split-screen camera in Unity, and how the camera
+                    angles and camera controls used can affect the player experience. It was fun to create the camera system, mainly
+                    because it wasn't required of the project but it was something that I really wanted to learn how to implement. I
+                    also had a lot of fun creating the game's movement system, because I feel that the gameplay encourages moving
+                    around the arena quickly, and the movement is quick enough to feel like a good place. Also, the movement was
+                    very responsive to the player's input, allowing players to weave around obstacles.
+                </p>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <h2>Lock Wizard</h2>
+                <p>Lock Wizard is a game created for the Meta Quest 2. Throughout the game, there is an evil wizard who locks the
+                    player up, and the player must pick the lock to get out. This project was done in a group of 4, and my main
+                    focus was creating the lock picking minigame. To create the minigame, I researched how to pick locks and figured
+                    out how best to adapt that into a virtual reality game. Figuring out how to set up that minigame and then
+                    applying it to virtual reality was a really fun experience, as I had never worked with virtual reality before.
+                </p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Yummy Gun</h2>
+                <p>This was the first project I created for the GIMM program, and the first game I ever made. The gameplay of Yummy
+                    Gun is a side-scrolling shooter, where players must dodge incoming bullets and obstacles while they shoot at
+                    enemies. My favorite part of this project was creating a fuel meter, because I feel it adds more challenge to
+                    the gameplay systems. As the player progresses through the level, they must pick up items to add to their fuel,
+                    otherwise they get a game over. Trying to find a good balance between having too much fuel and not enough that
+                    it became too challenging was a fun experience to test through.
+                </p>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <h2>Picture Perfect</h2>
+                <p>Picture Perfect is a 2D platformer that has the player going through a level that is based on a painting.
+                    The game uses AR as its basis, having players scan the the painting to unlock the level. Although the
+                    platforming
+                    section is not directly on the painting being scanned through AR, the level uses the painting as a background
+                    and
+                    the basis for the level design. I was one of the programmers on this project, and learned how to use AR to set
+                    the project up. We used the Vuforia package to set it up, and I learned how to utilize AR technology to create
+                    this game.
+                </p>
+                <hr>
+            </div>
+        </div>
+    </div>
 
-    <h2>Lock Wizard</h2>
-    <p>Lock Wizard is a game created for the Meta Quest 2. Throughout the game, there is an evil wizard who locks the
-        player up, and the player must pick the lock to get out. This project was done in a group of 4, and my main
-        focus was creating the lock picking minigame. To create the minigame, I researched how to pick locks and figured
-        out how best to adapt that into a virtual reality game. Figuring out how to set up that minigame and then
-        applying it to virtual reality was a really fun experience, as I had never worked with virtual reality before.
-    </p>
-    <hr>
-
-    <h2>Yummy Gun</h2>
-    <p>This was the first project I created for the GIMM program, and the first game I ever made. The gameplay of Yummy
-        Gun is a side-scrolling shooter, where players must dodge incoming bullets and obstacles while they shoot at
-        enemies. My favorite part of this project was creating a fuel meter, because I feel it adds more challenge to
-        the gameplay systems. As the player progresses through the level, they must pick up items to add to their fuel,
-        otherwise they get a game over. Trying to find a good balance between having too much fuel and not enough that
-        it became too challenging was a fun experience to test through.
-    </p>
-    <hr>
-
-    <h2>Picture Perfect</h2>
-    <p>Picture Perfect is a 2D platformer that has the player going through a level that is based on a painting.
-        The game uses AR as its basis, having players scan the the painting to unlock the level. Although the platforming 
-        section is not directly on the painting being scanned through AR, the level uses the painting as a background and 
-        the basis for the level design. I was one of the programmers on this project, and learned how to use AR to set 
-        the project up. We used the Vuforia package to set it up, and I learned how to utilize AR technology to create this game.
-    </p>
 </body>
 
 </html>
