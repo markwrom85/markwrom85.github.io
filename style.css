@@ -7,23 +7,21 @@
 }
 
 body{
-    background-color: steelblue;
+    background-color: var(--metal-blue);
     font-family: Arial, sans-serif;
-    background:coral;
 }
 
 h1{
     padding-bottom:1rem;
 }
 
-#navbar{
-    position:fixed;
+#navigation{
     top:0;
     width:100;
-    background-color:var(--dark-gray);
+    background-color:var(--gray-blue);
     background:rgba(#344055, 0.5);
 }
-#navbar a{
+#navigation a{
     text-decoration:none;
     color:var(--white);
 }
