@@ -1,37 +1,37 @@
-:root{
-    --white: #F4F4F6;
-    --green:#58B08B;
-    --metal-blue:#6C90AC;
-    --dark-gray:#6A7680;
-    --gray-blue:#344055;
+:root {
+    --licorice: #220c10ff;
+    --tang-blue: #2b59c3ff;
+    --imperial-red: #f15152ff;
+    --battleship-gray: #878472ff;
+    --columbia-blue: #ccdde2ff;
 }
 
-body{
-    background-color: var(--metal-blue);
+body {
+    background-color: var(--columbia-blue);
     font-family: Arial, sans-serif;
+    margin-bottom:5%;
 }
 
-h1{
-    padding-bottom:1rem;
+h1 {
+    padding-bottom: 1rem;
 }
 
-#navigation{
-    top:0;
-    width:100;
-    background-color:var(--gray-blue);
-    background:rgba(#344055, 0.5);
-}
-#navigation a{
-    text-decoration:none;
-    color:var(--white);
+#navigation {
+    top: 0;
+    width: 100;
+    background-color: var(--battleship-gray);
+    background: rgba(#344055, 0.5);
 }
 
-#navbar li{
-    list-style-type:none;
-    display:inline;
+#navigation a {
+    text-decoration: none;
+    color: var(--licorice);
+    overflow:hidden;
 }
-#navbar li:hover{
-    background-color:var(--gray-blue);
+
+#navigation a:hover {
+    background-color: var(--licorice);
+    color:white;
 }
 
 #biography {
@@ -39,29 +39,35 @@ h1{
     text-align: center;
 }
 
-#contact{
-    display:flex;
-    align-content:center;
-    justify-content:center;
+#contact {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
 }
+
 #contact li {
     list-style-type: none;
     /*need to get rid of padding*/
     display: inline;
 }
-#contact i{
-    padding:5px;
+
+#contact i {
+    padding: 5px;
+    color: var(--licorice);
 }
 
 #portrait {
     width: 25%;
 }
 
-#artifacts{
+#artifacts {
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
-#artifacts h1, #artifacts h2{
-    text-align:center;
+
+#artifacts h1,
+#artifacts h2 {
+    text-align: center;
 }
