@@ -26,6 +26,7 @@ h1 {
 #navigation a {
     text-decoration: none;
     color: var(--licorice);
+    /*make padding fill navbar height*/
     overflow:hidden;
 }
 
@@ -48,7 +49,6 @@ h1 {
 
 #contact li {
     list-style-type: none;
-    /*need to get rid of padding*/
     display: inline;
 }
 
