@@ -22,52 +22,46 @@
 </head>
 
 <body>
-    <!-- <div class="container" id="navbar">
-        <div class="row">
-            <div class="col-md-12">
-                <ul>
-                    <li><a href="#biography">About</a></li>
-                    <li><a href="#artifacts">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-
-    <nav id="navigation" class="navbar navbar-expand-lg">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#biography">About</a>
-                    <a class="nav-item nav-link" href="#artifacts">Portfolio</a>
-                    <a class="nav-item nav-link" href="#contact">Contact</a>
-                    <a class="nav-item nav-link" href="Markus_Rom_Resume.pdf" target="_blank">Resume</a>
+    <div id="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#about">About</a>
+                        <a class="nav-item nav-link" href="#artifacts">Portfolio</a>
+                        <a class="nav-item nav-link" href="#contact">Contact</a>
+                        <a class="nav-item nav-link" href="Markus_Rom_Resume.pdf" target="_blank">Resume</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
-    <div class="container">
+
+    <div class="container" id="about">
+        <br>
         <div class="row">
-            <div class="col-md-12" id="biography">
-                <br>
-                <h1>Markus Rom</h1>
-                <img src="Portrait.JPG" alt="Portrait" class="img-fluid" id="portrait">
-                <br>
-                <br>
-                <p>Hello, I'm Markus Rom, an aspiring game developer and student at Boise State University majoring in
-                    Games, Interactive Media, and Mobile Technologies (GIMM). Through my class experiences,
-                    I have become skilled at using Unity, C#, and the Adobe Suite to create various interactive
-                    experiences.
+                <div class="col-md-6 order-2 order-md-1" id="biography">
+                <h1>Hello, I'm <span>Markus Rom</span>, an Interactive Media Developer</h1>
+                <p>
+                    My name is I'm Markus Rom, a sophomore at Boise State University majoring in Games, Interactive Media,
+                    and Mobile Technologies (GIMM) with a minor in Film and Television. I specialize in visual storytelling,
+                    game design, and programming. I have a passion for creating engaging and immersive experiences through
+                    interactive media, aiming to create engaging and memorable experiences.
                 </p>
-                <hr>
-                <br>
+            </div>
+            <div class="col-md-6 order-1 order-md-2 mb-3 mb-md-0" >
+                <img src="Portrait.jpeg" alt="Portrait" class="img-fluid" id="portrait">
             </div>
         </div>
+        <br>
+        <hr>
+    </div>
+
 
         <div class="container" id="artifacts">
             <div class="row">
@@ -168,9 +162,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
 </body>
 
 </html>

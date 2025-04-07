@@ -14,6 +14,7 @@ body {
 
 h1 {
     padding-bottom: 1rem;
+    font-size:3rem;
 }
 
 #navigation {
@@ -21,6 +22,7 @@ h1 {
     width: 100;
     background-color: var(--battleship-gray);
     background: rgba(#344055, 0.5);
+    /* position:fixed; currently makes navbar not span the page*/ 
 }
 
 #navigation a {
@@ -35,9 +37,23 @@ h1 {
     color:white;
 }
 
-#biography {
+#about {
     margin: auto;
-    text-align: center;
+}
+#portrait{
+    margin:auto;
+    display:block;
+    border-radius:50px;
+    width:75%;
+
+}
+#biography{
+    margin:auto;
+    display:block;
+}
+#biography span{
+    color:transparent;
+    -webkit-text-stroke: 1.5px var(--imperial-red);
 }
 
 #contact {
@@ -57,9 +73,7 @@ h1 {
     color: var(--licorice);
 }
 
-#portrait {
-    width: 25%;
-}
+
 
 #artifacts {
     width: 100%;
