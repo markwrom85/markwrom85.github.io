@@ -84,6 +84,13 @@ h1 {
     text-align: center;
 }
 
+#contact ul{
+    padding:0;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+}
+
 #contact li {
     list-style-type: none;
     display: inline;
