@@ -66,8 +66,14 @@ h1 {
     display:block;
     border-radius:50px;
     width:75%;
-
 }
+#about .row {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+
 #biography{
     margin:auto;
     display:block;
