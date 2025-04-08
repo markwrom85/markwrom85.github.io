@@ -22,7 +22,11 @@ h1 {
     width: 100;
     background-color: var(--battleship-gray);
     background: rgba(#344055, 0.5);
-    /* position:fixed; currently makes navbar not span the page*/ 
+    position:fixed;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    text-align:center;
 }
 
 #navigation a {
@@ -35,6 +39,23 @@ h1 {
 #navigation a:hover {
     background-color: var(--licorice);
     color:white;
+}
+
+#navigation .navbar {
+    flex-wrap: nowrap; /* Prevents the navbar from wrapping on smaller screens */
+}
+
+#navigation .navbar-nav {
+    display: flex; /* Keeps the anchors in a horizontal row */
+    flex-direction: row; /* Ensures the items are laid out in a row */
+    justify-content: center; /* Centers the anchors horizontally */
+    align-items: center; /* Vertically centers the anchors */
+    width: 100%; /* Ensures the navbar spans the full width */
+}
+
+#navigation .nav-item {
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    margin: 0 10px; /* Adds spacing between the anchors */
 }
 
 #about {
