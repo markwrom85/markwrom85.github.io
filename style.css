@@ -119,3 +119,14 @@ h1 {
 #artifacts h2 {
     text-align: center;
 }
+
+button{
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--licorice);
+}
