@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Bootstrap libraries-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <!-- Required libraries for React.js to work -->
+        <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- This is OUR React.js component -->
+        <script src='assets/js/React/Component/ReactDataTable.js' type='text/babel'></script>
+
+        <!-- Awesome Font Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="style.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+        <script src='assets/js/React/Component/header.js' type='text/babel'></script>
+    </head>
+    <body>
+        <div id = "react-header"></div>
+        <br>
+        <div class = 'container'>
+            <div class = 'row'>
+                <div class = 'col-md-12'>
+                    <h2>Data Table</h2>
+                </div>
+            </div>
+            <div class = 'row'>
+                <div class = 'col-md-2'></div>
+                <div class = 'col-md-8'>
+                    <p>The filters for this table show more specific data that I've collected. Using the played filter together with 
+                        other filters, it shows a better criteria to see what sorts of games I have and haven't played. For instance, 
+                        the platforms with the least amount of games played are PS1 and PS2. Although this can be explained by the fact 
+                        that I have more titles for these two platforms than any others, the percentage of played to not played is about half. 
+                        Other platforms have a lower ratio of played and not played, which goes to show that I tend to buy more games for these 
+                        older platforms but don't play them as much as I do newer platforms. The release year only proves this further - 
+                        other than 2023's Final Fantasy XVI, the newest released games that I haven't played came out in 2012, showing 
+                        that I lean more towards playing newer releases before older ones.
+                    </p>
+                </div>
+                <div class = 'col-md-2'></div>
+            </div>
+            <br>
+            <div class = 'row'>
+                <div class = 'col-md-2'></div>
+                <div class = 'col-md-4'>
+                    <h2>Music</h2>
+                    <p>This table is big and boring so here's some background music!!</p>
+                </div>
+                <div id = 'centerVid' class = 'col-md-4'>
+                    <iframe src="https://www.youtube.com/embed/Bhbgm-sQiSI?si=nUu0MRzc43XRKKh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class = 'col-md-2'></div>
+            </div>
+            <hr>
+            <div class = 'row'>
+                <div class = 'col-md-12'>
+                    <div id = "react-data-table"></div>
+                </div>
+            </div>
+        </div>
+        <div id = "react-data-table"></div>
+    </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <!-- Bootstrap libraries-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Required libraries for React.js to work -->
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Awesome Font Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link rel="stylesheet" href="style.css">
+  <script src='assets/js/React/Component/header.js' type='text/babel'></script>
+</head>
+
+<body>
+  <div id='react-header'></div>
+  <br>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h2>Current Average Prices per Platform</h2>
+        <br>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6 chart'>
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+      </div>
+      <div class='col-md-1'></div>
+      <div class=col-md-5>
+        <div class='row'>
+          <div class='col-md-12'>
+            <h5>Color Key</h5>
+            <hr>
+            <div class='row'>
+              <p class='noIndent'>
+                PS1: <span id='PS1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                PS2: <span id='PS2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                PS3: <span id='PS3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                PS4: <span id='PS4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </p>
+            </div>
+            <div class='row'>
+              <p class='noIndent'>
+                PS5: <span id='PS5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                Xbox: <span id='Xbox'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                Xbox 360: <span
+                  id='Xbox360'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </p>
+            </div>
+            <div class='row'>
+              <p class='noIndent'>
+                Gamecube: <span
+                  id='Gamecube'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                Wii: <span id='Wii'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                Switch: <span
+                  id='Switch'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </p>
+            </div>
+            <div class='row'>
+              <p class='noIndent'>
+                Ds: <span id='Ds'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                3Ds: <span id='ThreeDs'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                Gameboy: <span
+                  id='Gameboy'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class=col-md-12>
+            <br>
+            <h5>Graph Description</h5>
+            <p>Since this graph is showing current average prices and is separated by which platform each title is on,
+              it shows that
+              most titles across all platforms don't average over 20 dollars. Also, while the average prices are fairly
+              consistent across the
+              board, there is an uptick that starts around 2015-2020. This shows that for the games I buy, I don't
+              typically spend more than
+              20 dollars unless it's a new release.
+            </p>
+            <br>
+            <p>There are only a handful of games that average over 40 dollars. While there are some more recent titles
+              whose
+              price can be explained by the fact that they were released within the last few years, the only explanation
+              for the
+              rest is that I was alright with spending more than I usually do.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 30, bottom: 30, left: 50 },
+      width = 600 - margin.left - margin.right,
+      height = 520 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+      //.attr("width", width + margin.left + margin.right)
+      //.attr("height", height + margin.top + margin.bottom)
+      .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+      .append("g")
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+
+    // Add the grey background that makes ggplot2 famous
+    svg
+      .append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("height", height)
+      .attr("width", width)
+      .style("fill", "EBEBEB")
+
+    //Read the data
+    d3.csv("https://raw.githubusercontent.com/markwrom85/MobileDataNarrative/refs/heads/main/myData.csv", function (data) {
+
+      // Add X axis
+      var x = d3.scaleLinear()
+        .domain([1985, 2025])
+        .range([0, width])
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x).tickSize(-height * 1.3).ticks(10))
+        .select(".domain").remove()
+
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .domain([0, 190])
+        .range([height, 0])
+        .nice()
+      svg.append("g")
+        .call(d3.axisLeft(y).tickSize(-width * 1.3).ticks(7))
+        .select(".domain").remove()
+
+      // Customization
+      svg.selectAll(".tick line").attr("stroke", "white")
+
+      // Add X axis label:
+      svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width / 2 + margin.left)
+        .attr("y", height + margin.top + 20)
+        .text("Year Released");
+
+      // Y axis label:
+      svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left + 20)
+        .attr("x", -margin.top - height / 2 + 20)
+        .text("Current Average Price")
+
+      // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
+      // Its opacity is set to 0: we don't see it by default.
+      var tooltip = d3.select("#my_dataviz")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+
+
+
+      // A function that change this tooltip when the user hover a point.
+      // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+      var mouseover = function (d) {
+        tooltip
+          .style("opacity", 1)
+      }
+      var mousemove = function (d) {
+        tooltip
+          .html("Release year: " + d.yearReleased + "<br>Current Average Price: " + d.currentAvgPrice + "<br>Title: " + d.title)
+          .style("left", (d3.mouse(this)[0] + 90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+          .style("top", (d3.mouse(this)[1]) + "px")
+      }
+
+      // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
+      var mouseleave = function (d) {
+        tooltip
+          .transition()
+          .duration(200)
+          .style("opacity", 0)
+      }
+
+      // Color scale: give me a specie name, I return a color
+      var color = d3.scaleOrdinal()
+        .domain(["PS1", "PS2", "PS3", "PS4", "PS5", "Xbox", "Xbox 360", "Gamecube", "Wii", "Switch", "DS", "3DS", "Gameboy"])
+        .range(["#F8766D", "#666699", "#619CFF", "#ff9933", "#cc3399", "#00BA38", "#cc99ff", "#669900", "#66ffcc", "#ffcccc", "#ff0066", "#ff66ff", "#006666"])
+
+      // Add dots
+      svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return x(d.yearReleased); })
+        .attr("cy", function (d) { return y(d.currentAvgPrice); })
+        .attr("r", 5)
+        .style("fill", function (d) { return color(d.platform) })
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+
+    })
+  </script>
+</body>
+
+</html>
