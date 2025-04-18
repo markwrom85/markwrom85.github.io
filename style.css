@@ -2,6 +2,7 @@
     --licorice: #220c10ff;
     --tang-blue: #2b59c3ff;
     --imperial-red: #f15152ff;
+    --darker-red: rgb(143, 41, 41);
     --battleship-gray: #878472ff;
     --columbia-blue: #ccdde2ff;
 }
@@ -12,9 +13,69 @@ body {
     margin-bottom:5%;
 }
 
-h1 {
-    padding-bottom: 1rem;
-    font-size:3rem;
+#HomeContent{
+    background-color: var(--battleship-gray);
+    color: var(--licorice);
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius:0 0 25px 25px;
+}
+
+#HomeContent h1 {
+    margin-bottom: 0;
+}
+
+#HomeHeader{
+    background-color:var(--tang-blue);
+    padding-top:15px;
+    padding-left:32px;
+    margin:0;
+    width:100%;
+    box-sizing:border-box;
+    border-radius:25px 25px 0 0;
+    color:var(--licorice);
+}
+
+h4{
+    margin-bottom:0;
+    padding-bottom:5px;
+}
+
+#HomeNavigation {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#HomeNavigation a {
+    text-decoration: none;
+    color: var(--licorice);
+    border:var(--darker-red) 1px solid;
+    border-radius: 20px;
+    padding:10px;
+    background-color:var(--imperial-red);
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}
+
+#HomeNavigation a:hover {
+    background-color: var(--licorice);
+    color:white;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column{
+    flex-direction:column;
+}
+
+.highlight-text {
+    color: var(--imperial-red);
+    font-weight: bold;
 }
 
 #navigation {
@@ -58,29 +119,12 @@ h1 {
     margin: 0 10px; /* Adds spacing between the anchors */
 }
 
-#about {
-    margin: auto;
-}
+
 #portrait{
     margin:auto;
     display:block;
-    border-radius:50px;
+    border-radius:175px;
     width:75%;
-}
-#about .row {
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-
-#biography{
-    margin:auto;
-    display:block;
-}
-#biography span{
-    color:transparent;
-    -webkit-text-stroke: 1.5px var(--imperial-red);
 }
 
 #contact {
@@ -104,29 +148,5 @@ h1 {
 
 #contact i {
     padding: 5px;
-    color: var(--licorice);
-}
-
-
-
-#artifacts {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-#artifacts h1,
-#artifacts h2 {
-    text-align: center;
-}
-
-button{
-    display:block;
-    margin:auto;
-    text-align:center;
-}
-
-button a {
-    text-decoration: none;
     color: var(--licorice);
 }
