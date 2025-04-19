@@ -1,26 +1,28 @@
 :root {
-    --licorice: #220c10ff;
-    --tang-blue: #2b59c3ff;
-    --imperial-red: #f15152ff;
-    --darker-red: rgb(143, 41, 41);
-    --battleship-gray: #878472ff;
-    --columbia-blue: #ccdde2ff;
+    --primary-color:#419D78;
+    --primary-accent:rgb(80, 76, 69);
+    --secondary-color:#FF5E5B;
+    --tertiary-color:#3B322C;
+    --text-color:#092327;
+    --content-color:#EBEBD3;
+    --page-background:#F2C3BB;
 }
 
 body {
-    background-color: var(--columbia-blue);
+    background-color: var(--page-background);
     font-family: Arial, sans-serif;
     margin-bottom:5%;
 }
 
 .content{
-    background-color: var(--battleship-gray);
+    background-color: var(--content-color);
     color: var(--licorice);
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
     margin: 0 auto;
     border-radius:0 0 15px 15px;
+    border: 1.5px solid var(--tertiary-color);
 }
 
 .content h1 {
@@ -28,13 +30,13 @@ body {
 }
 
 .content-header{
-    background-color:var(--tang-blue);
+    background-color:var(--primary-color);
     padding-top:15px;
     margin:0;
     width:100%;
     box-sizing:border-box;
     border-radius:15px 15px 0 0;
-    color:var(--licorice);
+    color:var(--text-color);
 }
 
 #portrait{
@@ -56,11 +58,11 @@ body {
 
 #homeNavigation button, #homeNavigation a {
     text-decoration: none;
-    color: var(--licorice);
-    border:var(--darker-red) 1px solid;
+    color: var(--text-color);
+    border:var(--primary-accent) 1px solid;
     border-radius: 20px;
     padding:10px;
-    background-color:var(--imperial-red);
+    background-color:var(--secondary-color);
     display:flex;
     flex-direction:column;
     margin-bottom:15px;
@@ -68,7 +70,7 @@ body {
 }
 
 #homeNavigation button:hover, #homeNavigation a:hover {
-    background-color: var(--licorice);
+    background-color: var(--text-color);
     color:white;
 }
 
@@ -82,7 +84,7 @@ body {
 }
 
 .highlight-text {
-    color: var(--imperial-red);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -107,5 +109,5 @@ body {
 
 #contactIcons i {
     padding: 5px;
-    color: var(--licorice);
+    color: var(--text-color);
 }
