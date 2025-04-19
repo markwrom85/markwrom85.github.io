@@ -16,7 +16,9 @@ body {
 .content{
     background-color: var(--battleship-gray);
     color: var(--licorice);
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
     margin: 0 auto;
     border-radius:0 0 25px 25px;
 }
@@ -43,9 +45,7 @@ body {
 }
 
 .content-header h4{
-    margin-bottom:0;
-    padding-bottom:5px;
-    text-align:center;
+    margin-left:12px;
 }
 
 #HomeNavigation {
