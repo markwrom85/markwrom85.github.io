@@ -57,23 +57,23 @@
             <br>
             <div class="row" id="homeNavigation">
                 <div class="col-md-3">
-                    <a href="projects.html"><i class="fa-regular fa-folder-open fa-2x"></i>Projects</a>
+                    <button id="projectButton"><i class="fa-regular fa-folder-open fa-2x"></i>Projects</button>
                 </div>
                 <div class="col-md-3">
-                    <a href="art.html"><i class="fa-solid fa-pencil fa-2x"></i>Art</a>
+                    <button id="artButton"><i class="fa-solid fa-pencil fa-2x"></i>Art</button>
                 </div>
                 <div class="col-md-3">
-                    <a href="contact.html"><i class="fa-regular fa-paper-plane fa-2x"></i>Contact</a>
+                    <button id="contactButton"><i class="fa-regular fa-paper-plane fa-2x"></i>Contact</button>
                 </div>
                 <div class="col-md-3">
-                    <a href="Markus_Rom_Resume.pdf" target="_blank"><i
-                            class="fa-regular fa-file-lines fa-2x"></i>Resume</a>
+                    <a href="Markus_Rom_Resume.pdf" target="_blank"><i class="fa-regular fa-file-lines fa-2x"></i>Resume</a>
                 </div>
             </div>
         </div>
     </div>
     <br>
-    <div class="container">
+    
+    <div class="container" id="projects">
         <div class="row content-header">
             <div class="col-md-12">
                 <h4>Projects</h4>
@@ -167,8 +167,18 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
+    
+    <div class="container" id="art">
+        <div class="row content-header">
+            <div class="col-md-12">
+                <h4>Art</h4>
+            </div>
+        </div>
+        <div class="content">
+            <p>I use a mix of Clip Studio Paint Pro and Adobe Photoshop</p>
+        </div>
+    </div>
+    <div class="container" id="contact">
         <div class="row content-header">
             <div class="col-md-12">
                 <h4>Contact</h4>
@@ -181,7 +191,7 @@
                         and I'll respond as soon as I can!</p>
                 </div>
                 <div class="col-md-12">
-                    <ul id="contact">
+                    <ul id="contactIcons">
                         <li>
                             <a href="https://www.linkedin.com/in/markus-rom-48202b2ab/" target="_blank"><i
                                     class="fa-brands fa-linkedin fa-3x"></i></a>
@@ -200,6 +210,31 @@
         </div>
     </div>
 
+    <script>
+        const projectContainer = document.getElementById('projects');
+        const artContainer = document.getElementById('art');
+        const contactContainer = document.getElementById('contact');
+        projectContainer.hidden=false;
+        artContainer.hidden=true;
+        contactContainer.hidden=true;
+
+        document.getElementById('projectButton').addEventListener('click', () =>{
+            projectContainer.hidden=false;
+            artContainer.hidden=true;
+            contactContainer.hidden=true;
+        });
+        document.getElementById('artButton').addEventListener('click', () =>{
+            projectContainer.hidden=true;
+            artContainer.hidden=false;
+            contactContainer.hidden=true;
+        });
+        document.getElementById('contactButton').addEventListener('click', () =>{
+            projectContainer.hidden=true;
+            artContainer.hidden=true;
+            contactContainer.hidden=false;
+        });
+
+    </script>
 </body>
 
 </html>

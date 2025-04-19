@@ -20,7 +20,7 @@ body {
     padding-right: 2rem;
     padding-top: 2rem;
     margin: 0 auto;
-    border-radius:0 0 25px 25px;
+    border-radius:0 0 15px 15px;
 }
 
 .content h1 {
@@ -33,7 +33,7 @@ body {
     margin:0;
     width:100%;
     box-sizing:border-box;
-    border-radius:25px 25px 0 0;
+    border-radius:15px 15px 0 0;
     color:var(--licorice);
 }
 
@@ -54,7 +54,7 @@ body {
     text-align: center;
 }
 
-#homeNavigation a {
+#homeNavigation button, #homeNavigation a {
     text-decoration: none;
     color: var(--licorice);
     border:var(--darker-red) 1px solid;
@@ -64,9 +64,10 @@ body {
     display:flex;
     flex-direction:column;
     margin-bottom:15px;
+    width:100%;
 }
 
-#homeNavigation a:hover {
+#homeNavigation button:hover, #homeNavigation a:hover {
     background-color: var(--licorice);
     color:white;
 }
@@ -85,26 +86,26 @@ body {
     font-weight: bold;
 }
 
-#contact {
+#contactIcons {
     display: flex;
     align-content: center;
     justify-content: center;
     text-align: center;
 }
 
-#contact ul{
+#contactIcons ul{
     padding:0;
     margin: 0 auto;
     display:flex;
     justify-content:center;
 }
 
-#contact li {
+#contactIcons li {
     list-style-type: none;
     display: inline;
 }
 
-#contact i {
+#contactIcons i {
     padding: 5px;
     color: var(--licorice);
 }
