@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap');
 :root {
     --primary-color:#419D78;
     --primary-accent:rgb(80, 76, 69);
@@ -8,9 +9,16 @@
     --page-background:#F2C3BB;
 }
 
+h1, h2, h3{
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+h4{
+    font-family: "Raleway", sans-serif;
+}
+
 body {
     background-color: var(--page-background);
-    font-family: Arial, sans-serif;
+    font-family: "Rubik", sans-serif;
     margin-bottom:5%;
 }
 
@@ -94,6 +102,10 @@ body {
     align-content: center;
     justify-content: center;
     text-align: center;
+}
+
+#contactIcons i:hover{
+    color:var(--secondary-color);
 }
 
 #contactIcons ul{
