@@ -36,6 +36,9 @@ body {
 .content h1 {
     margin-bottom: 0;
 }
+.content h2{
+    text-align:center;
+}
 
 .content-header{
     background-color:var(--primary-color);
