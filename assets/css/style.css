@@ -5,6 +5,7 @@
     --secondary-color:#FF5E5B;
     --tertiary-color:#3B322C;
     --text-color:#092327;
+    --light-text-color:#f0efef;
     --content-color:#EBEBD3;
     --page-background:#F2C3BB;
 }
@@ -165,4 +166,42 @@ body {
     animation-name:fadeIn;
     animation-duration: .5s;
     animation-timing-function:ease-out;
+}
+
+.img-thumbnail {
+    width: 100%; /* Ensure thumbnails are responsive */
+    height: 400px; /* Set a fixed height for uniform size */
+    object-fit: cover; /* Crop the image to fit the thumbnail */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.img-thumbnail:hover{
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+#modalImage{
+    max-width:90vh;
+    max-height:90vh;
+    object-fit:contain;
+}
+
+.modal-content{
+    background-color:transparent;
+    border:none;
+    box-shadow:none;
+}
+.modal-body{
+    padding:0;
+    text-align:center;
+}
+.modal-backdrop{
+    background-color:rgb(0, 0, 0);
+}
+.modal img{
+    cursor:pointer;
+}
+.modal p{
+    color:var(--light-text-color);
+    font-size:1.2rem;
+    margin-top:10px;
 }
