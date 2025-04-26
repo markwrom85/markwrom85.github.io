@@ -177,15 +177,21 @@ body {
 }
 .img-thumbnail:hover{
     transform: scale(1.05); /* Slightly enlarge the image on hover */
+    cursor:zoom-in; /* Change cursor to indicate zoom effect */
 }
 
 #modalImage{
-    max-width:90vh;
+    max-width:90vw;
     max-height:90vh;
     object-fit:contain;
+    display:block;
+    margin:auto;
 }
 
 .modal-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
     background-color:transparent;
     border:none;
     box-shadow:none;
@@ -198,7 +204,7 @@ body {
     background-color:rgb(0, 0, 0);
 }
 .modal img{
-    cursor:pointer;
+    cursor:zoom-out;
 }
 .modal p{
     color:var(--light-text-color);
