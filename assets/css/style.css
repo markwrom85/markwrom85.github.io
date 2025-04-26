@@ -107,6 +107,13 @@ body {
     border:none;
 }
 
+#art img{
+    display:block;
+    margin: auto;
+    width:100%;
+    border-radius:15px;
+}
+
 .flex-column{
     flex-direction:column;
 }
