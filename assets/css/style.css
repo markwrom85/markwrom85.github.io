@@ -124,33 +124,35 @@ body {
     font-weight: bold;
 }
 
-#contactIcons {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+#contactIcons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,auto);
+    justify-items:center;
+    text-align:center;
+    padding:20px;
+    max-width: 450px;
+    margin: 0 auto;
 }
-
-#contactIcons i:hover{
+#contactIcons a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+#contactIcons a:hover{
+    transform: scale(1.05);
     color:var(--secondary-color);
 }
-
-#contactIcons ul{
-    padding:0;
-    margin: 0 auto;
-    display:flex;
-    justify-content:center;
+#contactIcons i{
+    margin-bottom:10px;
 }
 
-#contactIcons li {
-    list-style-type: none;
-    display: inline;
-}
-
-#contactIcons i {
-    padding: 5px;
-    color: var(--text-color);
-}
+.centered-text {
+    text-align: center;
+} 
 
 @keyframes fadeIn {
     from {
