@@ -87,6 +87,10 @@ body {
     color:white;
 }
 
+#projects img, #projects .responsive-iframe-container{
+    margin-bottom:19px;
+}
+
 .vertical-center {
     display: flex;
     align-items: center;
