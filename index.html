@@ -58,7 +58,8 @@
             <br>
             <div class="row" id="homeNavigation">
                 <div class="col-6 col-md-3">
-                    <button id="projectButton"><i class="fa-regular fa-folder-open fa-2x"></i>Projects</button>
+                    <button id="projectButton" class="selected-button"><i
+                            class="fa-regular fa-folder-open fa-2x"></i>Projects</button>
                 </div>
                 <div class="col-6 col-md-3">
                     <button id="artButton"><i class="fa-solid fa-pencil fa-2x"></i>Art</button>
@@ -87,19 +88,22 @@
                 <div class="col-md-6">
                     <h2>Pills of Hatred</h2>
                     <p>
-                        Pills of Hatred was a solo project for the GIMM 290 class. Two players fight against each other to 
-                        pick up the most items. My main focus for this project was gameplay, as all of the assets were found 
-                        for free on the Unity store. I wanted to make the game feel extremely fast paced, so in addition to fast and tight movement, 
+                        Pills of Hatred was a solo project for the GIMM 290 class. Two players fight against each other
+                        to
+                        pick up the most items. My main focus for this project was gameplay, as all of the assets were
+                        found
+                        for free on the Unity store. I wanted to make the game feel extremely fast paced, so in addition
+                        to fast and tight movement,
                         I added a multiplier meter that increases as players pick up items and fight each other.
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h2>Lock Wizard</h2>
                     <p>
-                        Lock Wizard was a group project for the GIMM 270 class. Throughout the game, players must pick 
-                        locks that have been placed by an evil wizard. My main focus for this project was creating the 
-                        lock picking minigame, which I wanted to create as close to real life lock picking as possible. 
-                        This was the first time that I worked with virtual reality, and I had fun figuring out how to 
+                        Lock Wizard was a group project for the GIMM 270 class. Throughout the game, players must pick
+                        locks that have been placed by an evil wizard. My main focus for this project was creating the
+                        lock picking minigame, which I wanted to create as close to real life lock picking as possible.
+                        This was the first time that I worked with virtual reality, and I had fun figuring out how to
                         set up the minigame for VR.
                     </p>
                 </div>
@@ -146,7 +150,8 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <h2>Mobile Data Narrative</h2>
-                    <img src="assets/images/mobile_data_narrative_screenshot.png" alt="mobile data narrative screenshot" class="img-fluid">
+                    <img src="assets/images/mobile_data_narrative_screenshot.png" alt="mobile data narrative screenshot"
+                        class="img-fluid">
                     <p>The Mobile Data Narrative is a class project where we each had to individually gather
                         our own data and present it through various graphs and charts of our choosing. This project
                         was my first major website project, and I learned how to use HTML, CSS and JavaScript to create
@@ -157,7 +162,20 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-
+                    <h2>Pig-Kid</h2>
+                    <div class="responsive-iframe-container">
+                        <iframe class="responsive-iframe"
+                            src="https://www.youtube.com/embed/B3gQtthLIxc?si=sdPmdNQqxoJR90UM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>
+                        Pig-Kid was a short scene I wrote, directed, and edited for the FILM 290 class. I worked in a group of five, 
+                        and each week we would rotate who did what job. This specific scene was my first time writing and directing a script, 
+                        but I also got experience with being Director of Photography, Mixer/Boom Operator, and acting for my group-members scenes.
+                        The video above is a final cut of my scene, which was also the first time I color graded a video.
+                    </p>
                 </div>
             </div>
         </div>
@@ -388,18 +406,27 @@
             projectContainer.hidden = false;
             artContainer.hidden = true;
             contactContainer.hidden = true;
+            document.getElementById("projectButton").classList.add("selected-button");
+            document.getElementById("artButton").classList.remove("selected-button");
+            document.getElementById("contactButton").classList.remove("selected-button");
             document.getElementById("sectionScrollTarget").scrollIntoView({ behavior: 'smooth' });
         });
         document.getElementById('artButton').addEventListener('click', () => {
             projectContainer.hidden = true;
             artContainer.hidden = false;
             contactContainer.hidden = true;
+            document.getElementById("projectButton").classList.remove("selected-button");
+            document.getElementById("artButton").classList.add("selected-button");
+            document.getElementById("contactButton").classList.remove("selected-button");
             document.getElementById("sectionScrollTarget").scrollIntoView({ behavior: 'smooth' });
         });
         document.getElementById('contactButton').addEventListener('click', () => {
             projectContainer.hidden = true;
             artContainer.hidden = true;
             contactContainer.hidden = false;
+            document.getElementById("projectButton").classList.remove("selected-button");
+            document.getElementById("artButton").classList.remove("selected-button");
+            document.getElementById("contactButton").classList.add("selected-button");
             document.getElementById("sectionScrollTarget").scrollIntoView({ behavior: 'smooth' });
         });
 
