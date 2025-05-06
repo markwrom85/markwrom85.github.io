@@ -70,8 +70,6 @@ body {
 
 
 #homeNavigation button, #homeNavigation a {
-    all: unset; /* Reset all default styles */
-
     text-decoration: none;
     color: var(--text-color);
     border:var(--primary-accent) 1px solid;
@@ -83,14 +81,10 @@ body {
     margin-bottom:15px;
     width:100%;
     transition: transform 0.3s ease;
-    justify-content: center; 
-    align-items: center;
-    width:100%;
-    margin: 0;
 }
 
 @media (max-width: 768px) {
-    #homeNavigation button {
+    #homeNavigation button, #homeNavigation a {
         width: 90%; /* Ensure buttons are not too wide */
         margin: 0 auto; /* Center the buttons horizontally */
     }
