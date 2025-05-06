@@ -464,10 +464,10 @@
             modalCaption.textContent = imageCaption; // Set the caption text
         });
 
-        const modalImage = document.getElementById('modalImage');
-        modalImage.addEventListener('click', function () {
-            const artModal = bootstrap.Modal.getInstance(modalImage.closest('.modal'));
-            artModal.hide(); // Hide the modal when the image is clicked
+        // Close the modal when clicking anywhere on it
+        artModal.addEventListener('click', function (event) {
+                const modalInstance = bootstrap.Modal.getInstance(artModal);
+                modalInstance.hide(); // Close the modal
         });
 
     </script>
