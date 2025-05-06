@@ -70,6 +70,8 @@ body {
 
 
 #homeNavigation button, #homeNavigation a {
+    all: unset; /* Reset all default styles */
+
     text-decoration: none;
     color: var(--text-color);
     border:var(--primary-accent) 1px solid;
@@ -85,6 +87,13 @@ body {
     align-items: center;
     width:100%;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    #homeNavigation button {
+        width: 90%; /* Ensure buttons are not too wide */
+        margin: 0 auto; /* Center the buttons horizontally */
+    }
 }
 
 #homeNavigation button:hover, #homeNavigation a:hover {
