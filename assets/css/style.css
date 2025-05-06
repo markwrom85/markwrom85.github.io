@@ -224,3 +224,9 @@ body {
     font-size:1.2rem;
     margin-top:10px;
 }
+
+@media (max-width: 768px) { /* Target screens smaller than Bootstrap's md breakpoint */
+    #contact .content {
+        margin-bottom: 1.5rem; /* Add margin below the first content container */
+    }
+}
