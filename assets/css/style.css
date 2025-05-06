@@ -81,6 +81,10 @@ body {
     margin-bottom:15px;
     width:100%;
     transition: transform 0.3s ease;
+    justify-content: center; 
+    align-items: center;
+    width:100%;
+    margin: 0;
 }
 
 #homeNavigation button:hover, #homeNavigation a:hover {
