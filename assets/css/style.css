@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap');
 :root {
-    --primary-color:#419D78;
+    --primary-color:#48AD84;
     --primary-accent:rgb(80, 76, 69);
     --secondary-color:#FF5E5B;
     --tertiary-color:#3B322C;
@@ -15,6 +15,9 @@ h1, h2, h3{
 }
 h4{
     font-family: "Raleway", sans-serif;
+}
+a{
+    color:#025FE9;
 }
 
 body {
@@ -152,6 +155,15 @@ body {
 .highlight-text {
     color: var(--primary-color);
     font-weight: bold;
+    text-shadow: 
+    -1.5px -1.5px 0 var(--text-color), /* Top-left shadow */
+    1.5px -1.5px 0 var(--text-color),  /* Top-right shadow */
+    -1.5px 1.5px 0 var(--text-color),  /* Bottom-left shadow */
+    1.5px 1.5px 0 var(--text-color),   /* Bottom-right shadow */
+    0 -1.5px 0 var(--text-color),    /* Top shadow */
+    0 1.5px 0 var(--text-color),     /* Bottom shadow */
+    -1.5px 0 0 var(--text-color),    /* Left shadow */
+    1.5px 0 0 var(--text-color);     /* Right shadow */
 }
 
 #contactIcons{
