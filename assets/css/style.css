@@ -84,7 +84,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #homeNavigation button i, #homeNavigation a i {
+    #homeNavigation button i, #homeNavigation a i, #homeNavigation button, #homeNavigation a {
         display: block; /* Ensure the icon behaves like a block element */
         margin: 0 auto; /* Center the icon horizontally */
         text-align: center; /* Ensure the icon is centered */
