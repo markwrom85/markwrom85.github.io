@@ -84,10 +84,21 @@ body {
 }
 
 @media (max-width: 768px) {
-    #homeNavigation button i, #homeNavigation a i, #homeNavigation button, #homeNavigation a {
+    #homeNavigation button, #homeNavigation a {
+        display: flex; /* Ensure the button content is a flex container */
+        flex-direction: column; /* Stack the icon and text vertically */
+        align-items: center; /* Center the icon and text horizontally */
+        text-align: center; /* Center-align the text */
+    }
+
+    #homeNavigation button i, #homeNavigation a i {
         display: block; /* Ensure the icon behaves like a block element */
         margin: 0 auto; /* Center the icon horizontally */
-        text-align: center; /* Ensure the icon is centered */
+    }
+
+    #homeNavigation button span, #homeNavigation a span {
+        margin-top: 5px; /* Add spacing between the icon and the text */
+        text-align: center; /* Ensure the text is centered */
     }
 }
 
