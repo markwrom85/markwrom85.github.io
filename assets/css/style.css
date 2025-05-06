@@ -90,7 +90,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #homeNavigation button {
+    #homeNavigation button, #homeNavigation a {
         width: 90%; /* Ensure buttons are not too wide */
         margin: 0 auto; /* Center the buttons horizontally */
     }
