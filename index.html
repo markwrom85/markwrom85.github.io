@@ -481,6 +481,49 @@
             modalInstance.hide(); // Close the modal
         });
 
+        //Show sections based on history state
+        function showSection(section) {
+            projectContainer.hidden = section !== 'projects';
+            artContainer.hidden = section !== 'art';
+            contactContainer.hidden = section !== 'contact';
+
+            document.getElementById("projectButton").classList.toggle("selected-button", section === 'projects');
+            document.getElementById("artButton").classList.toggle("selected-button", section === 'art');
+            document.getElementById("contactButton").classList.toggle("selected-button", section === 'contact');
+            document.getElementById("sectionScrollTarget").scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Update history when a button is clicked
+        document.getElementById('projectButton').addEventListener('click', () => {
+            showSection('projects');
+            history.pushState({ section: 'projects' }, '', '#projects');
+        });
+        document.getElementById('artButton').addEventListener('click', () => {
+            showSection('art');
+            history.pushState({ section: 'art' }, '', '#art');
+        });
+        document.getElementById('contactButton').addEventListener('click', () => {
+            showSection('contact');
+            history.pushState({ section: 'contact' }, '', '#contact');
+        });
+
+        // Listen for back/forward navigation
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.section) {
+                showSection(event.state.section);
+            } else {
+                // Default to projects if no state
+                showSection('projects');
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            let section = 'projects'; // default
+            if (location.hash === '#art') section = 'art';
+            else if (location.hash === '#contact') section = 'contact';
+            showSection(section);
+        });
+
     </script>
 </body>
 

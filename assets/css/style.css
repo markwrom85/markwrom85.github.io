@@ -111,7 +111,7 @@ body {
     transform: scale(1.05);
 }
 
-#homeNavigation button.selected-button {
+#homeNavigation button.selected-button, #homeNavigation a.selected-button {
     background-color: var(--text-color);
     color: white;
 }
