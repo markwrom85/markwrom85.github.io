@@ -481,6 +481,18 @@
             modalInstance.hide(); // Close the modal
         });
 
+        //Show sections based on history state
+        function showSection(section) {
+            projectContainer.hidden = section !== 'projects';
+            artContainer.hidden = section !== 'art';
+            contactContainer.hidden = section !== 'contact';
+
+            document.getElementById("projectButton").classList.toggle("selected-button", section === 'projects');
+            document.getElementById("artButton").classList.toggle("selected-button", section === 'art');
+            document.getElementById("contactButton").classList.toggle("selected-button", section === 'contact');
+            document.getElementById("sectionScrollTarget").scrollIntoView({ behavior: 'smooth' });
+        }
+
         // Update history when a button is clicked
         document.getElementById('projectButton').addEventListener('click', () => {
             showSection('projects');
@@ -511,7 +523,7 @@
             else if (location.hash === '#contact') section = 'contact';
             showSection(section);
         });
-        
+
     </script>
 </body>
 
